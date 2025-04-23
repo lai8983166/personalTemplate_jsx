@@ -1,0 +1,10 @@
+// src/styles/FilterSele.module.scss
+
+.filterSeleRow {
+  // 与 style={{ padding: 24 }} 等价
+  padding: 24px;
+
+  // 要让 justify-content 生效，需要 display: flex
+  display: flex;
+  justify-content: center;
+}
