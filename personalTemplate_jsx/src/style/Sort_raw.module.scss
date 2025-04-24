@@ -1,0 +1,95 @@
+// Sort_raw.module.scss
+
+$primary-color: #1890ff;
+$header-bg: #f5f5f5;
+$header-hover: #e6f7ff;
+$active-bg: #bae7ff;
+$border-color: #ddd;
+$font-stack: "Arial, sans-serif";
+$arrow-color: #aaa;
+$arrow-size: 0.6em;
+$arrow-spacing: 4px;
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: $font-stack;
+  padding: 0 16px;
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: $primary-color;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th,
+    td {
+      padding: 12px 8px;
+      border: 1px solid $border-color;
+    }
+
+    .col-header {
+      position: relative;
+      user-select: none;
+      background: $header-bg;
+      cursor: pointer;
+
+      // 预留出箭头区域，避免内容区被撑大
+      padding-right: 24px;
+
+      // 悬停背景
+      &:hover {
+        background: $header-hover;
+      }
+
+      // 默认显示上下箭头（灰色）
+      &::before,
+      &::after {
+        position: absolute;
+        right: 8px;
+        width: 1em;
+        text-align: center;
+        color: $arrow-color;
+        font-size: $arrow-size;
+      }
+      &::before {
+        content: "▲";
+        top: 50%;
+        transform: translateY(-100%); // 上箭头稍稍往上
+      }
+      &::after {
+        content: "▼";
+        top: 50%;
+        transform: translateY(0); // 下箭头稍稍往下
+      }
+
+      // 当前排序列高亮背景
+      &.active {
+        background: $active-bg;
+      }
+
+      // 升序时，高亮上箭头
+      &.asc::before {
+        color: $primary-color;
+      }
+      // 降序时，高亮下箭头
+      &.desc::after {
+        color: $primary-color;
+      }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background: #fafafa;
+      }
+      tr:hover {
+        background: #f0f0f0;
+      }
+    }
+  }
+}

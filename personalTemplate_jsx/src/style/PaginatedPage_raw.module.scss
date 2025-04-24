@@ -1,0 +1,61 @@
+// src/components/PaginationPage.module.scss
+
+// 变量定义
+$primary-color: #1890ff;
+$list-border: #ddd;
+$btn-disabled-color: #ccc;
+$font-stack: "Arial, sans-serif";
+
+.pagination-container {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: $font-stack;
+
+  // 列表部分
+  .item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+
+    .item {
+      padding: 8px 12px;
+      border-bottom: 1px solid $list-border;
+    }
+  }
+
+  // 分页按钮容器
+  .pagination {
+    text-align: center;
+
+    .page-btn {
+      margin: 0 4px;
+      padding: 6px 12px;
+      border: 1px solid $primary-color;
+      background: #fff;
+      color: $primary-color;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+
+      // 悬停效果（可选）
+      &:hover:not(:disabled) {
+        background: $primary-color;
+        color: #fff;
+      }
+
+      // 禁用态
+      &:disabled {
+        border-color: $btn-disabled-color;
+        color: $btn-disabled-color;
+        cursor: not-allowed;
+        background: #fafafa;
+      }
+
+      // 当前页高亮
+      &.active {
+        background: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,11 +1,10 @@
-// src/FilterSele.jsx
 import React from "react";
 import { Card, Row, Col } from "antd";
 import { useNavigate } from "react-router-dom";
 import styles from "../style/FilterSele.module.scss";
 const { Meta } = Card;
 
-const FilterSele = () => {
+const PaginatedpageSele = () => {
   const navigate = useNavigate();
 
   return (
@@ -14,11 +13,11 @@ const FilterSele = () => {
         <Card
           hoverable
           style={{ width: 240 }}
-          onClick={() => navigate("/filter/ant")}
+          onClick={() => navigate("/paginatedpage/paginatedpageAnt")}
         >
           <Meta
-            title="Ant Design 筛选器"
-            description="基于 Ant Design 的完整筛选器"
+            title="Ant Design 分页"
+            description="基于 Ant Design 的分页展示"
           />
         </Card>
       </Col>
@@ -27,13 +26,13 @@ const FilterSele = () => {
         <Card
           hoverable
           style={{ width: 240 }}
-          onClick={() => navigate("/filter/raw")}
+          onClick={() => navigate("/paginatedpage/paginatedpageRaw")}
         >
-          <Meta title="原生筛选器" description="不使用 UI 库的纯原生实现" />
+          <Meta title="原生分页" description="不使用 UI 库的纯原生实现" />
         </Card>
       </Col>
     </Row>
   );
 };
 
-export default FilterSele;
+export default PaginatedpageSele;
