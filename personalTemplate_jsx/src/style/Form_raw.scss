@@ -1,0 +1,56 @@
+// src/FormComponent.scss
+$form-bg-color: #f5f5f5;
+$input-border-color: #ccc;
+$error-color: red;
+
+.form-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $form-bg-color;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .error {
+    color: $error-color;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #45a049;
+  }
+}

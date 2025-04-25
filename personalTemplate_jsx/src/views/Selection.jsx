@@ -8,35 +8,48 @@ const Selection = () => {
   const navigate = useNavigate();
 
   return (
-    <Row gutter={24} className={styles.filterSeleRow}>
-      <Col>
-        <Card
-          hoverable
-          style={{ width: 240 }}
-          onClick={() => navigate("/filter")}
-        >
-          <Meta title="筛选器" description="" />
-        </Card>
-      </Col>
-      <Col>
-        <Card
-          hoverable
-          style={{ width: 240 }}
-          onClick={() => navigate("/paginatedpage")}
-        >
-          <Meta title="分页" description="" />
-        </Card>
-      </Col>
-      <Col>
-        <Card
-          hoverable
-          style={{ width: 240 }}
-          onClick={() => navigate("/sort")}
-        >
-          <Meta title="排序" description="" />
-        </Card>
-      </Col>
-    </Row>
+    <div>
+      <Row gutter={24} className={styles.filterSeleRow}>
+        <Col>
+          <Card
+            hoverable
+            style={{ width: 240 }}
+            onClick={() => navigate("/filter")}
+          >
+            <Meta title="筛选器" description="" />
+          </Card>
+        </Col>
+        <Col>
+          <Card
+            hoverable
+            style={{ width: 240 }}
+            onClick={() => navigate("/paginatedpage")}
+          >
+            <Meta title="分页" description="" />
+          </Card>
+        </Col>
+        <Col>
+          <Card
+            hoverable
+            style={{ width: 240 }}
+            onClick={() => navigate("/sort")}
+          >
+            <Meta title="排序" description="" />
+          </Card>
+        </Col>
+      </Row>
+      <Row gutter={24} className={styles.filterSeleRow}>
+        <Col>
+          <Card
+            hoverable
+            style={{ width: 240 }}
+            onClick={() => navigate("/form")}
+          >
+            <Meta title="表单" description="" />
+          </Card>
+        </Col>
+      </Row>
+    </div>
   );
 };
 

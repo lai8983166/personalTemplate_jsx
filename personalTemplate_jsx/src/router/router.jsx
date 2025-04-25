@@ -11,7 +11,9 @@ import PaginationPageRaw from "../views/PaginatedPage_raw";
 import SortSele from "../views/SortSele";
 import SortAnt from "../views/Sort_ant";
 import SortRaw from "../views/Sort_raw";
-
+import FormSele from "../views/FormSele";
+import FormAnt from "../views/Form_ant";
+import FormRaw from "../views/Form_raw";
 const App = () => (
   <BrowserRouter>
     <Routes>
@@ -20,6 +22,7 @@ const App = () => (
       <Route path="/filter" element={<FilterSele />} />
       <Route path="/paginatedpage" element={<PaginatedpageSele />} />
       <Route path="/sort" element={<SortSele />} />
+      <Route path="/form" element={<FormSele />} />
       {/* 点击后分别渲染两种筛选器 */}
       <Route path="/filter/ant" element={<FilterAnt />} />
       <Route path="/filter/raw" element={<FilterRaw />} />
@@ -33,6 +36,8 @@ const App = () => (
       />
       <Route path="/sort/sortAnt" element={<SortAnt />} />
       <Route path="/sort/sortRaw" element={<SortRaw />} />
+      <Route path="/form/formAnt" element={<FormAnt />} />
+      <Route path="/form/formRaw" element={<FormRaw />} />
     </Routes>
   </BrowserRouter>
 );
