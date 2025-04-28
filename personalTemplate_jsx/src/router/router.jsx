@@ -14,6 +14,9 @@ import SortRaw from "../views/Sort_raw";
 import FormSele from "../views/FormSele";
 import FormAnt from "../views/Form_ant";
 import FormRaw from "../views/Form_raw";
+import PicUploadSele from "../views/PicUploadSele";
+import PicUploadRaw from "../views/PicUpload_Raw";
+import PicUploadAnt from "../views/PicUpload_Ant";
 const App = () => (
   <BrowserRouter>
     <Routes>
@@ -23,6 +26,7 @@ const App = () => (
       <Route path="/paginatedpage" element={<PaginatedpageSele />} />
       <Route path="/sort" element={<SortSele />} />
       <Route path="/form" element={<FormSele />} />
+      <Route path="/picupload" element={<PicUploadSele />} />
       {/* 点击后分别渲染两种筛选器 */}
       <Route path="/filter/ant" element={<FilterAnt />} />
       <Route path="/filter/raw" element={<FilterRaw />} />
@@ -38,6 +42,8 @@ const App = () => (
       <Route path="/sort/sortRaw" element={<SortRaw />} />
       <Route path="/form/formAnt" element={<FormAnt />} />
       <Route path="/form/formRaw" element={<FormRaw />} />
+      <Route path="/picupload/picuploadRaw" element={<PicUploadRaw />} />
+      <Route path="/picupload/picuploadAnt" element={<PicUploadAnt />} />
     </Routes>
   </BrowserRouter>
 );

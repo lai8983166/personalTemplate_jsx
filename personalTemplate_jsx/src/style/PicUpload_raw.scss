@@ -1,0 +1,41 @@
+.image-upload-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.file-previews {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.file-preview {
+  position: relative;
+  margin: 10px;
+  text-align: center;
+}
+
+.progress-bar {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.progress {
+  height: 10px;
+}

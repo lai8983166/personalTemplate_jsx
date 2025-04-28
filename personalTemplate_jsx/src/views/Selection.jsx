@@ -48,6 +48,15 @@ const Selection = () => {
             <Meta title="表单" description="" />
           </Card>
         </Col>
+        <Col>
+          <Card
+            hoverable
+            style={{ width: 240 }}
+            onClick={() => navigate("/picupload")}
+          >
+            <Meta title="图片上传" description="" />
+          </Card>
+        </Col>
       </Row>
     </div>
   );
