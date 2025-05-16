@@ -57,6 +57,24 @@ const Selection = () => {
             <Meta title="图片上传" description="" />
           </Card>
         </Col>
+        <Col>
+          <Card
+            hoverable
+            style={{ width: 240 }}
+            onClick={() => navigate("/icons")}
+          >
+            <Meta title="图标" description="" />
+          </Card>
+        </Col>
+        <Col>
+          <Card
+            hoverable
+            style={{ width: 240 }}
+            onClick={() => navigate("/dragdrop")}
+          >
+            <Meta title="拖拽" description="" />
+          </Card>
+        </Col>
       </Row>
     </div>
   );
